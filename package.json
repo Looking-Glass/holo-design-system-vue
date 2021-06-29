@@ -1,12 +1,12 @@
 {
   "name": "holo-design-system-vue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "storybook:build": "vue-cli-service storybook:build -c config/storybook -s public",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook -s ./public",
+    "storybook:build": "vue-cli-service storybook:build -c config/storybook -s public/assets",
+    "storybook:serve": "TAILWIND_MODE=watch vue-cli-service storybook:serve -p 6006 -c config/storybook -s public/assets",
     "viewer": "tailwind-config-viewer"
   },
   "dependencies": {

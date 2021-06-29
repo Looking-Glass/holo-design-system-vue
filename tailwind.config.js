@@ -26,11 +26,12 @@ const red58 = '#DA4C54'
 
 // tailwind.config.js
 module.exports = {
-  // purge: [
-  //   './src/**/*.html',
-  //   './src/**/*.js',
-  //   './src/**/*.vue'
-  // ],
+  mode: 'jit',
+  purge: [
+    './src/**/*.html',
+    './src/**/*.js',
+    './src/**/*.vue'
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {

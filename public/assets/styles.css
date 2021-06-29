@@ -6,37 +6,37 @@
   @font-face {
     font-family: Editorial New;
     font-weight: 300;
-    src: url(/assets/fonts/EditorialNew-Ultralight) format("woff2");
+    src: url(/fonts/EditorialNew-Ultralight.woff2) format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: Editorial New;
     font-weight: 400;
-    src: url(/assets/fonts/EditorialNew-Regular) format("woff2");
+    src: url(/fonts/EditorialNew-Regular.woff2) format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: Neue Haas;
     font-weight: 400;
-    src: url(/assets/fonts/NeueHaasDisplay-Roman) format("woff2");
+    src: url(/fonts/NeueHaasDisplay-Roman.woff2) format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: Neue Haas;
     font-weight: 600;
-    src: url(/assets/fonts/NeueHaasDisplay-Mediu) format("woff2");
+    src: url(/fonts/NeueHaasDisplay-Mediu.woff2) format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: Neue Haas;
     font-weight: 700;
-    src: url(/assets/fonts/NeueHaasDisplay-Bold) format("woff2");
+    src: url(/fonts/NeueHaasDisplay-Bold.woff2) format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: Space Grotesk;
     font-weight: 600;
-    src: url(/assets/fonts/SpaceGrotesk-Medium) format("woff2");
+    src: url(/fonts/SpaceGrotesk-Medium.woff2) format("woff2");
     font-display: swap;
   }
 }

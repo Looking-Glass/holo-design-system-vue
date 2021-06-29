@@ -18,6 +18,6 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  trigger: '<button>Hey</button>',
+  label: 'Hey',
   items: '<MenuItem>Menu item</MenuItem><MenuItem>Menu item #2</MenuItem>'
 };

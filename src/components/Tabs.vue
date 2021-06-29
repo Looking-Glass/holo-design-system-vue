@@ -13,16 +13,6 @@
 import { VTabs } from 'vuetensils/src/components';
 
 export default {
-  props: {
-    tabs: {
-      type: Array,
-      required: true
-    },
-    value: {
-      type: Number,
-      default: 0
-    }
-  },
   components: {
     VTabs
   }
@@ -31,7 +21,7 @@ export default {
 
 <style>
 .vts-tabs [role="tab"] {
-  @apply group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10;
+  @apply relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10;
 }
 
 .vts-tabs [role="tab"][aria-selected="true"] {
