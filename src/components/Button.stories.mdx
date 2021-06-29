@@ -1,0 +1,34 @@
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
+import Button from './Button';
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+<ArgsTable of={Button} />
+
+## Default
+
+<Canvas>
+  <Story name="Default">
+    {{
+        components: { Button },
+        template: '<Button @click="action">Hello Button</Button>',
+        methods: { action: action("clicked") }
+    }}
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story name="Sizes">
+    {{
+        components: { Button },
+        template: '<div class="grid gap-5 place-content-start"><Button @click="action" size="small">Small Button</Button><Button @click="action" size="large">Large Button</Button></div>',
+        methods: { action: action("clicked") }
+    }}
+  </Story>
+</Canvas>
