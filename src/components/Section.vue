@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag">
+  <component :is="component">
     <slot />
   </component>
 </template>
