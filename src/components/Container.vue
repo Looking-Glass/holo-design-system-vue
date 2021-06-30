@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pl-4 pr-4 ml-auto mr-auto block"
+    class="pl-4 pr-4 ml-auto mr-auto block w-full"
     :class="{
       'max-w-screen-lg' : size === 'regular',
       'max-w-screen-md' : size === 'small',
