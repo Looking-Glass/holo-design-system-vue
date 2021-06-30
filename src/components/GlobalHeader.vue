@@ -25,7 +25,7 @@
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
                 <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
               </component>
-              <Button variant="primary" @click="toggleMenu" aria-controls="global-header-mobile-menu" :aria-expanded="isMenuOpen">
+              <Button variant="secondary" @click="toggleMenu" aria-controls="global-header-mobile-menu" :aria-expanded="isMenuOpen">
                 <span v-if="!isMenuOpen">
                   Menu
                 </span>
