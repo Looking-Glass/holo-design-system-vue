@@ -9,7 +9,7 @@
       'px-4 py-2 text-base': size === 'large',
 
       // Shapes
-      'rounded-full' : shape === 'rounded',
+      'rounded-3xl' : shape === 'rounded',
       'rounded-sm' : shape === 'square',
       
       // Primary + Brand

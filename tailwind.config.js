@@ -26,11 +26,12 @@ const red58 = '#DA4C54'
 
 // tailwind.config.js
 module.exports = {
-  mode: 'jit',
+  // mode: 'jit',
   purge: [
-    './src/**/*.html',
-    './src/**/*.js',
-    './src/**/*.vue'
+    './pages/**/*.vue',
+    './components/**/*.vue',
+    './layouts/**/*.vue',
+    './node_modules/holo-design-system-vue/src/**/*.vue'
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -88,7 +89,7 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')],
   important: true
 }
 
