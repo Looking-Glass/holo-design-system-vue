@@ -19,7 +19,7 @@ export default {
   },
   props: {
     level: [String, Number],
-    tag: {
+    component: {
       type: String,
       default: "section",
     },
