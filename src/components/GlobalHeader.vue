@@ -1,5 +1,5 @@
 <template>
-  <div class="block overflow-visible text-black" ref="header">
+  <div class="block overflow-visible text-black">
     <div
       class="fixed top-0 left-0 w-full z-20 transition-transform"
       :class="{ 'global-header-solid-bg' : solidBackground }"
@@ -226,6 +226,10 @@ export default {
     window.addEventListener('scroll', this.handleHeaderOnScroll, { passive: true })
 
     window.addEventListener('resize', this.handleHeaderOnScroll, { passive: true })
+
+    this.setGlobalHeaderHeight()
+
+    window.addEventListener('resize', this.setGlobalHeaderHeight, { passive: true })
   },
   computed: {
     hasCallout () {
@@ -234,13 +238,6 @@ export default {
     hasSubnav () {
       return !!this.$slots.subnav
     },
-    headerHeight () {
-      if (typeof window !== 'undefined') {
-        return 
-      }
-
-      return 200
-    }
   },
   methods: {
     closeCallout () {
@@ -249,15 +246,21 @@ export default {
     toggleMenu () {
       this.isMenuOpen = !this.isMenuOpen
     },
+    setGlobalHeaderHeight () {
+      const topHeaderHeight = this.$refs.topHeader ? this.$refs.topHeader.getBoundingClientRect().height : 0
+      const bottomHeaderHeight = this.$refs.bottomHeader ? this.$refs.bottomHeader.getBoundingClientRect().height : 0
+      let root = document.documentElement;
+      root.style.setProperty('--global-header-height', bottomHeaderHeight + topHeaderHeight + 'px')
+    },
     handleHeaderOnScroll () {
-      if (this.isAlwaysFixed) {
-        return
-      }
-
       const scrollDelta = 50
       const currentScroll = window.scrollY
       const topHeaderHeight = this.$refs.topHeader ? this.$refs.topHeader.getBoundingClientRect().height : 0
       const isMobile = !!(this.$refs.mobileHeader.offsetWidth || this.$refs.mobileHeader.offsetHeight || this.$refs.mobileHeader.getClientRects().length );
+
+      if (this.isAlwaysFixed) {
+        return
+      }
 
       if (Math.abs(this.lastScroll - currentScroll) <= scrollDelta) {
         return

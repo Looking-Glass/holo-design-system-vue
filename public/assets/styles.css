@@ -41,6 +41,14 @@
   }
 }
 
+@layer utilities {
+  @variants responsive {
+    .mt-header {
+      margin-top: var(--global-header-height);
+    }
+  }
+}
+
 body {
   @apply font-sans;
   @apply text-base;
