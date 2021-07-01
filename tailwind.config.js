@@ -28,9 +28,7 @@ const red58 = '#DA4C54'
 module.exports = {
   // mode: 'jit',
   purge: [
-    './pages/**/*.vue',
-    './components/**/*.vue',
-    './layouts/**/*.vue',
+    './**/*.vue',
     './node_modules/holo-design-system-vue/src/**/*.vue'
   ],
   darkMode: false, // or 'media' or 'class'
