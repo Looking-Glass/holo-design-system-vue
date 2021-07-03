@@ -220,6 +220,14 @@ export default {
     isAlwaysFixed: {
       type: Boolean,
       default: false
+    },
+    mobileSlidePoint: {
+      type: String,
+      default: '800px'
+    },
+    desktopSlidePoint: {
+      type: String,
+      default: '1080px'
     }
   },
   mounted () {
@@ -267,7 +275,7 @@ export default {
       }
 
       if (isMobile) {
-        if (currentScroll > 800) {
+        if (currentScroll > this.mobileSlidePoint) {
           this.solidBackground = true
         } else {
           this.solidBackground = false
@@ -275,7 +283,7 @@ export default {
 
       } else {
         // We're past the fold
-        if (currentScroll > 1080) {
+        if (currentScroll > this.desktopSlidePoint) {
           this.solidBackground = true
           // We're moving down
           if (currentScroll > this.lastScroll) {
