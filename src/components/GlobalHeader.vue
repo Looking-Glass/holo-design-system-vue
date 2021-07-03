@@ -288,12 +288,10 @@ export default {
           // We're moving down
           if (currentScroll > this.lastScroll) {
             this.headerTransform = '-' + topHeaderHeight + 'px'
-            console.log('Down', this.headerTransform)
 
           // We're moving up
           } else {
             this.headerTransform = '0px'
-            console.log('Up', this.headerTransform)
           }
         // We're not past the fold
         } else {
