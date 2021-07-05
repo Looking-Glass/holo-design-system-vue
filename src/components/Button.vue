@@ -5,8 +5,8 @@
     @click="emitClick"
     :class="{
       // Sizes
-      'px-3 py-1 text-sm': size === 'small',
-      'px-4 py-2 text-base': size === 'large',
+      'px-4 py-1.5 text-sm': size === 'small',
+      'px-5 py-2.5 text-base': size === 'large',
 
       // Shapes
       'rounded-3xl' : shape === 'rounded',
