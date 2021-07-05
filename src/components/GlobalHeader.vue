@@ -1,7 +1,7 @@
 <template>
   <div class="block overflow-visible text-black">
     <div
-      class="fixed top-0 left-0 w-full z-20 transition-transform"
+      class="fixed top-0 left-0 w-full z-20 transition-all"
       :class="{ 'global-header-solid-bg' : solidBackground }"
       :style="`transform: translateY(${headerTransform})`"
     >
@@ -19,9 +19,9 @@
             </Container>
           </div>
         </div>
-        <header class="md:hidden global-header-solid-bg" ref="mobileHeader">
+        <header class="lg:hidden global-header-solid-bg" ref="mobileHeader">
           <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav}">
-            <div class="grid justify-between content-between grid-flow-col auto-cols-auto py-2">
+            <div class="grid items-center justify-between content-between grid-flow-col auto-cols-auto py-2">
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
                 <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
               </component>
@@ -35,7 +35,7 @@
               </Button>
             </div>
             <div class="space-y-4 py-4" :hidden="!isMenuOpen" id="global-header-mobile-menu">
-              <DisclosureMenu label="Products" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+              <DisclosureMenu label="Products" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
                 <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
                 <MenuItem :href="links['4k']">Looking Glass 4K</MenuItem>
                 <MenuItem :href="links['8k']">Looking Glass 8K</MenuItem>
@@ -76,7 +76,7 @@
           </Container>
         </header>
         <header
-          class="hidden md:block"
+          class="hidden lg:block"
           ref="desktopHeader"
         >
           <Container size="full" :class="{'border-b border-gray-300' : hasSubnav}">
@@ -259,6 +259,7 @@ export default {
       const bottomHeaderHeight = this.$refs.bottomHeader ? this.$refs.bottomHeader.getBoundingClientRect().height : 0
       let root = document.documentElement;
       root.style.setProperty('--global-header-height', bottomHeaderHeight + topHeaderHeight + 'px')
+      this.$emit('loaded', true)
     },
     handleHeaderOnScroll () {
       const scrollDelta = 50
@@ -284,13 +285,14 @@ export default {
       } else {
         // We're past the fold
         if (currentScroll > this.desktopSlidePoint) {
-          this.solidBackground = true
+
           // We're moving down
           if (currentScroll > this.lastScroll) {
             this.headerTransform = '-' + topHeaderHeight + 'px'
 
           // We're moving up
           } else {
+            this.solidBackground = true
             this.headerTransform = '0px'
           }
         // We're not past the fold
