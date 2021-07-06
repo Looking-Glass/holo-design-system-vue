@@ -3,7 +3,8 @@
     <button
       :aria-expanded="open"
       :aria-controls="id"
-      class="flex items-center bg-transparent px-3 py-1.5 font-bold font-sans text-base w-full"
+      class="flex items-center bg-transparent font-bold font-sans w-full"
+      :class="{ 'text-base px-3 py-1.5' : !large, 'px-4 py-2.5 text-md' : large }"
       @click="toggleAccordion"
       v-bind="$props"
       v-on="$listeners"
@@ -12,18 +13,18 @@
         {{ label }}
       </span>
       <svg
+        width="18"
+        height="18"
         class="transition-transform ml-auto"
-        :style="open && 'transform: rotate(180deg);'"
-        width="17"
-        height="10"
-        viewBox="0 0 17 10"
+        :style="open && 'transform: rotate(45deg);'"
+        viewBox="0 0 18 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M16.479 0.209429C16.2284 -0.0698096 15.8248 -0.0698096 15.5742 0.209429L8.33529 8.27471L1.09641 0.209429C0.845783 -0.0698096 0.438923 -0.0698096 0.188295 0.209429C-0.0623302 0.488667 -0.0623302 0.941976 0.188295 1.22121L7.88286 9.79057C8.13348 10.0698 8.54034 10.0698 8.78772 9.79057L16.479 1.22121C16.7296 0.941976 16.7296 0.492294 16.479 0.209429Z" fill="currentColor"/>
+        <path d="M18 8L10 8L10 -3.49691e-07L8 -4.37114e-07L8 8L-3.49691e-07 8L-4.37114e-07 10L8 10L8 18L10 18L10 10L18 10L18 8Z" fill="currentColor"/>
       </svg>
     </button>
-    <div :id="id" class="w-full" v-if="open">
+    <div :id="id" class="w-full" :hidden="!open">
       <slot />
     </div>
   </div>
@@ -46,11 +47,20 @@ export default {
     label: {
       type: String,
       required: true
+    },
+    large: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
-      open: this.startsOpen
+      open: false
+    }
+  },
+  mounted() {
+    if (this.startsOpen) {
+      this.open = true
     }
   },
   methods: {
