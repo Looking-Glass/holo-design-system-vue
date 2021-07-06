@@ -222,12 +222,12 @@ export default {
       default: false
     },
     mobileSlidePoint: {
-      type: String,
-      default: '800px'
+      type: Number,
+      default: 800
     },
     desktopSlidePoint: {
-      type: String,
-      default: '1080px'
+      type: Number,
+      default: 1080
     }
   },
   mounted () {
