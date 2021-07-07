@@ -310,7 +310,7 @@ export default {
 
 <style>
 .global-header-link {
-  @apply font-sans-alt text-base cursor-pointer block text-black;
+  @apply font-sans text-base cursor-pointer block text-black;
 }
 
 .global-header-solid-bg {
