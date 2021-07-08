@@ -2,7 +2,7 @@
   <div class="block overflow-visible text-black">
     <div
       class="fixed top-0 left-0 w-full z-20 transition-all global-header-solid-bg"
-      :class="{ 'border-bottom' : solidBackground }"
+      :class="{ 'border-black border-b' : solidBackground }"
       :style="`transform: translateY(${headerTransform})`"
     >
       <div ref="topHeader">
@@ -317,12 +317,8 @@ export default {
 }
 
 .global-header-solid-bg {
-  background-color: #fff;
+  @apply bg-white;
   /* -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px); */
-}
-
-.border-bottom {
-  border-bottom: 1px solid #000;
 }
 </style>
