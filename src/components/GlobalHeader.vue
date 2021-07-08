@@ -20,7 +20,7 @@
           </div>
         </div>
         <header class="lg:hidden global-header-solid-bg" ref="mobileHeader">
-          <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav}">
+          <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav && showSubNav}">
             <div class="grid items-center justify-between content-between grid-flow-col auto-cols-auto py-2">
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
                 <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
@@ -79,7 +79,7 @@
           class="hidden lg:block"
           ref="desktopHeader"
         >
-          <Container size="full" :class="{'border-b border-gray-300' : hasSubnav}">
+          <Container size="full" :class="{'border-b border-gray-300' : hasSubnav && showSubnav}">
             <nav class="grid grid-cols-2 gap-4 justify-between items-center py-4">
               <div class="flex space-x-7 items-center">
                 <component :is="linkComponent" :href="links['home']" class="global-header-link">
@@ -133,7 +133,7 @@
           </Container>
         </header>
       </div>
-      <nav v-if="hasSubnav" ref="bottomHeader" class="w-full z-10">
+      <nav v-if="hasSubnav && showSubNav" ref="bottomHeader" class="w-full z-10">
         <Container size="full">
           <slot name="subnav" />
         </Container>
@@ -218,6 +218,10 @@ export default {
       default: false
     },
     isAlwaysFixed: {
+      type: Boolean,
+      default: false
+    },
+    showSubNav: {
       type: Boolean,
       default: false
     },
