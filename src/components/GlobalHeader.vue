@@ -1,8 +1,8 @@
 <template>
   <div class="block overflow-visible text-black">
     <div
-      class="fixed top-0 left-0 w-full z-20 transition-all"
-      :class="{ 'global-header-solid-bg' : solidBackground }"
+      class="fixed top-0 left-0 w-full z-20 transition-all global-header-solid-bg"
+      :class="{ 'border-bottom' : solidBackground }"
       :style="`transform: translateY(${headerTransform})`"
     >
       <div ref="topHeader">
@@ -42,7 +42,7 @@
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
               <component :is="linkComponent" :href="links['software']" class="global-header-link">
-                Software
+                Software??
               </component>
               <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
                 Solutions
@@ -288,8 +288,7 @@ export default {
 
       } else {
         // We're past the fold
-        if (currentScroll > this.desktopSlidePoint) {
-
+        if (currentScroll > 0) {
           // We're moving down
           if (currentScroll > this.lastScroll) {
             this.headerTransform = '-' + topHeaderHeight + 'px'
@@ -314,12 +313,16 @@ export default {
 
 <style>
 .global-header-link {
-  @apply font-sans-alt text-base cursor-pointer block text-black;
+  @apply font-sans text-base cursor-pointer block text-black;
 }
 
 .global-header-solid-bg {
-  background-color: rgba(255,255,255, 0.75);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: #fff;
+  /* -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); */
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000;
 }
 </style>
