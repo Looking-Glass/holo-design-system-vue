@@ -2,7 +2,7 @@
   <div class="block overflow-visible text-black">
     <div
       class="fixed top-0 left-0 w-full z-20 transition-all global-header-solid-bg"
-      :class="{ 'border-black border-b' : solidBackground }"
+      :class="{ 'border-gray-300 border-b' : solidBackground }"
       :style="`transform: translateY(${headerTransform})`"
     >
       <div ref="topHeader">
