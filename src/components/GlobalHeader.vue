@@ -42,7 +42,7 @@
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
               <component :is="linkComponent" :href="links['software']" class="global-header-link">
-                Software??
+                Software
               </component>
               <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
                 Solutions
