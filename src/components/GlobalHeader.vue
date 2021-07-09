@@ -36,6 +36,7 @@
             </div>
             <div class="space-y-4 py-4" :hidden="!isMenuOpen" id="global-header-mobile-menu">
               <DisclosureMenu label="Products" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
+                <MenuItem :href="links['product']">Product Overview</MenuItem>
                 <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
                 <MenuItem :href="links['4k']">Looking Glass 4K</MenuItem>
                 <MenuItem :href="links['8k']">Looking Glass 8K</MenuItem>
@@ -176,6 +177,7 @@ export default {
       default() {
         return {
           'home': '/',
+          'product': 'https://lookingglassfactory.com/product/overview',
           'portrait': 'https://lookingglassfactory.com/portrait',
           '4k': 'https://lookingglassfactory.com/4k',
           '8k': 'https://lookingglassfactory.com/8k',
