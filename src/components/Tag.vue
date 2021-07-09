@@ -34,7 +34,7 @@
       'text-white': color === 'white' && variant === 'secondary',
 
       // Secondary/Tertiary + Black
-      'text-black': color === 'black' && variant === 'secondary',
+      'bg-white text-black': color === 'black' && variant === 'secondary',
 
       // Secondary/Tertiary + Positive
       'text-utility-positive': color === 'utility-positive' && variant === 'secondary',
