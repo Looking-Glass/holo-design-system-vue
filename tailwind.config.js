@@ -86,7 +86,12 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     }
   },
-  variants: {},
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+      cursor: ['disabled']
+    }
+  },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')],
   important: true
 }

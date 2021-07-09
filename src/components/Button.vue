@@ -1,7 +1,7 @@
 <template>
   <component
     :is="component"
-    class="cursor-pointer text-center flex place-items-center place-content-center font-sans hover:opacity-80 transition-opacity"
+    class="cursor-pointer text-center flex place-items-center place-content-center font-sans hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
     @click="emitClick"
     v-bind="$attrs"
     :class="{
