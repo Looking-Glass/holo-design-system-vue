@@ -5,7 +5,7 @@
       tablist: 'relative z-0 rounded-lg shadow flex divide-x divide-gray-200'
     }"
   >
-    <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope"><slot :name="slot" v-bind="scope"/></template>
+    <slot v-for="slot in Object.keys($slots)" :name="slot" :slot="slot"/>
   </VTabs>
 </template>
 
