@@ -3,6 +3,7 @@
     :is="component"
     class="cursor-pointer text-center flex place-items-center place-content-center font-sans hover:opacity-80 transition-opacity"
     @click="emitClick"
+    v-bind="$attrs"
     :class="{
       // Sizes
       'px-4 py-1.5 text-sm': size === 'small',
