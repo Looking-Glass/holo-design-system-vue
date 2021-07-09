@@ -20,7 +20,7 @@
           </div>
         </div>
         <header class="lg:hidden global-header-solid-bg" ref="mobileHeader">
-          <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav && showSubNav}">
+          <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav && showSubnav}">
             <div class="grid items-center justify-between content-between grid-flow-col auto-cols-auto py-2">
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
                 <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
@@ -133,7 +133,7 @@
           </Container>
         </header>
       </div>
-      <nav v-if="hasSubnav && showSubNav" ref="bottomHeader" class="w-full z-10">
+      <nav v-if="hasSubnav && showSubnav" ref="bottomHeader" class="w-full z-10">
         <Container size="full">
           <slot name="subnav" />
         </Container>
@@ -221,7 +221,7 @@ export default {
       type: Boolean,
       default: false
     },
-    showSubNav: {
+    showSubnav: {
       type: Boolean,
       default: false
     },
