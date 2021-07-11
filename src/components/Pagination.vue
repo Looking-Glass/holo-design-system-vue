@@ -45,14 +45,14 @@ export default {
     changePage(n) {
       this.$emit('input', n)
     },
-    nextPage(n) {
-      if (n + 1 <= this.pages.length) {
-        this.$emit('input', n + 1)
+    nextPage() {
+      if (this.value + 1 <= this.pages) {
+        this.$emit('input', this.value + 1)
       }
     },
-    prevPage(n) {
-      if (n - 1 >= 1) {
-        this.$emit('input', n - 1)
+    prevPage() {
+      if (this.value - 1 >= 1) {
+        this.$emit('input', this.value - 1)
       }
     }
   }

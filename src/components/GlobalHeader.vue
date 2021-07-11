@@ -2,7 +2,7 @@
   <div class="block overflow-visible text-black">
     <div
       class="fixed top-0 left-0 w-full z-20 transition-all global-header-solid-bg"
-      :class="{ 'border-bottom' : solidBackground }"
+      :class="{ 'border-gray-300 border-b' : solidBackground }"
       :style="`transform: translateY(${headerTransform})`"
     >
       <div ref="topHeader">
@@ -20,7 +20,7 @@
           </div>
         </div>
         <header class="lg:hidden global-header-solid-bg" ref="mobileHeader">
-          <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav}">
+          <Container size="full" :class="{'border-b border-gray-300 pb-1' : hasSubnav && showSubnav}">
             <div class="grid items-center justify-between content-between grid-flow-col auto-cols-auto py-2">
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
                 <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
@@ -80,7 +80,7 @@
           class="hidden lg:block"
           ref="desktopHeader"
         >
-          <Container size="full" :class="{'border-b border-gray-300' : hasSubnav}">
+          <Container size="full" :class="{'border-b border-gray-300' : hasSubnav && showSubnav}">
             <nav class="grid grid-cols-2 gap-4 justify-between items-center py-4">
               <div class="flex space-x-7 items-center">
                 <component :is="linkComponent" :href="links['home']" class="global-header-link">
@@ -134,7 +134,7 @@
           </Container>
         </header>
       </div>
-      <nav v-if="hasSubnav" ref="bottomHeader" class="w-full z-10">
+      <nav v-if="hasSubnav && showSubnav" ref="bottomHeader" class="w-full z-10">
         <Container size="full">
           <slot name="subnav" />
         </Container>
@@ -220,6 +220,10 @@ export default {
       default: false
     },
     isAlwaysFixed: {
+      type: Boolean,
+      default: false
+    },
+    showSubnav: {
       type: Boolean,
       default: false
     },
@@ -315,12 +319,8 @@ export default {
 }
 
 .global-header-solid-bg {
-  background-color: #fff;
+  @apply bg-white;
   /* -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px); */
-}
-
-.border-bottom {
-  border-bottom: 1px solid #000;
 }
 </style>
