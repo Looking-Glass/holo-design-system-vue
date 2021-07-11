@@ -54,7 +54,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Neue Haas', 'sans-serif'],
-      'sans-alt': ['Neue Haas Grotesk', 'sans-serif'],
+      'sans-alt': ['Neue Haas', 'sans-serif'],
       serif: ['Editorial New', 'serif'],
     },
     fontSize: {
