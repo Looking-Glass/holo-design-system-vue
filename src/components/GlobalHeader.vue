@@ -52,11 +52,13 @@
                 <MenuItem :href="links['learn']">Home</MenuItem>
                 <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
                 <MenuItem :href="links['docs']">Docs</MenuItem>
+                <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Explore" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
                 <MenuItem :href="links['holograms']">Holograms</MenuItem>
                 <MenuItem :href="links['blog']">Blog</MenuItem>
+                <MenuItem :href="links['2d3d']">2D to 3D Conversion</MenuItem>
               </DisclosureMenu>
               <component :is="linkComponent" :href="links['support']" class="global-header-link">
                 Support
@@ -103,11 +105,13 @@
                   <MenuItem :href="links['learn']">Home</MenuItem>
                   <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
                   <MenuItem :href="links['docs']">Docs</MenuItem>
+                  <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
                 </Menu>
                 <Menu label="Explore" class="global-header-link">
                   <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
                   <MenuItem :href="links['holograms']">Holograms</MenuItem>
                   <MenuItem :href="links['blog']">Blog</MenuItem>
+                  <MenuItem :href="links['2d3d']">2D to 3D Conversion</MenuItem>
                 </Menu>
               </div>
               <div class="flex space-x-7 justify-end items-center">
@@ -186,6 +190,8 @@ export default {
           'software': 'https://lookingglassfactory.com/software',
           'solutions': 'https://lookingglassfactory.com/solutions',
           'learn': 'https://learn.lookingglassfactory.com/',
+          '2d3d-marketing': 'https://lookingglassfactory.com/3d-photos',
+          '2d3d': 'https://lookingglassfactory.com/account/2dto3d',
           'getting-started': 'https://learn.lookingglassfactory.com/onboarding',
           'docs': 'https://docs.lookingglassfactory.com',
           'how-it-works': 'https://lookingglassfactory.com/tech',
