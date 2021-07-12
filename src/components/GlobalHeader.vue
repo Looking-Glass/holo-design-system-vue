@@ -38,8 +38,8 @@
               <DisclosureMenu label="Products" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
                 <MenuItem :href="links['product']">Product Overview</MenuItem>
                 <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
-                <MenuItem :href="links['4k']">Looking Glass 4K</MenuItem>
-                <MenuItem :href="links['8k']">Looking Glass 8K</MenuItem>
+                <MenuItem :href="links['4k']">Looking Glass 4K Gen 2</MenuItem>
+                <MenuItem :href="links['8k']">Looking Glass 8K Gen 2</MenuItem>
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
               <component :is="linkComponent" :href="links['software']" class="global-header-link">
@@ -89,8 +89,8 @@
                 <Menu label="Products" class="global-header-link">
                   <MenuItem :href="links['product']">Product Overview</MenuItem>
                   <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
-                  <MenuItem :href="links['4k']">Looking Glass 4K</MenuItem>
-                  <MenuItem :href="links['8k']">Looking Glass 8K</MenuItem>
+                  <MenuItem :href="links['4k']">Looking Glass 4K Gen 2</MenuItem>
+                  <MenuItem :href="links['8k']">Looking Glass 8K Gen 2</MenuItem>
                   <MenuItem :href="links['accessories']">Accessories</MenuItem>
                 </Menu>
                 <component :is="linkComponent" :href="links['software']" class="global-header-link">
