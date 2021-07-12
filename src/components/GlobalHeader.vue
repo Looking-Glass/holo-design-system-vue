@@ -87,6 +87,7 @@
                   <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
                 </component>
                 <Menu label="Products" class="global-header-link">
+                  <MenuItem :href="links['product']">Product Overview</MenuItem>
                   <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
                   <MenuItem :href="links['4k']">Looking Glass 4K</MenuItem>
                   <MenuItem :href="links['8k']">Looking Glass 8K</MenuItem>
