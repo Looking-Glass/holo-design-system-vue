@@ -70,10 +70,10 @@
                 Cart
               </component>
               <DisclosureMenu label="Account" hideLabel :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem v-if="!isLoggedIn" component="button" @click="onLogin()" class="global-header-link">Login</MenuItem>
+                <MenuItem v-if="!isLoggedIn" :href="links['login']" class="global-header-link">Login</MenuItem>
                 <MenuItem v-if="!isLoggedIn" :href="links['signup']" class="global-header-link">Signup</MenuItem>
                 <MenuItem v-if="isLoggedIn" :href="links['profile']" class="global-header-link">Profile</MenuItem>
-                <MenuItem v-if="!isLoggedIn" component="button" @click="onLogout()" class="global-header-link">Logout</MenuItem>
+                <MenuItem v-if="isLoggedIn" :href="links['logout']" class="global-header-link">Logout</MenuItem>
               </DisclosureMenu>
             </div>
           </Container>
@@ -129,10 +129,10 @@
                   <template slot="icon">
                     <svg width="14" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 .667a4.176 4.176 0 00-4.167 4.166A4.176 4.176 0 007 9a4.176 4.176 0 004.167-4.167A4.176 4.176 0 007 .667zm0 1.25a2.907 2.907 0 012.917 2.916A2.907 2.907 0 017 7.75a2.907 2.907 0 01-2.917-2.917A2.907 2.907 0 017 1.917zm-5.009 8.75c-.908 0-1.658.75-1.658 1.657v.634c0 1.502.95 2.664 2.211 3.36 1.262.696 2.86 1.015 4.456 1.015 1.597 0 3.194-.32 4.456-1.015 1.075-.594 1.885-1.542 2.111-2.735h.1v-1.259c0-.908-.75-1.657-1.658-1.657H1.99zm0 1.25h10.018a.4.4 0 01.409.407v.01h-.001v.624c0 .999-.561 1.712-1.565 2.266-1.005.554-2.428.86-3.852.86s-2.848-.306-3.852-.86-1.565-1.267-1.565-2.266v-.634c0-.232.175-.407.408-.407z" fill="currentColor"></path></svg>
                   </template>
-                  <MenuItem v-if="!isLoggedIn" component="button" @click="onLogin()" class="global-header-link">Login</MenuItem>
+                  <MenuItem v-if="!isLoggedIn" :href="links['login']" class="global-header-link">Login</MenuItem>
                   <MenuItem v-if="!isLoggedIn" :href="links['signup']" class="global-header-link">Signup</MenuItem>
                   <MenuItem v-if="isLoggedIn" :href="links['profile']" class="global-header-link">Profile</MenuItem>
-                  <MenuItem v-if="isLoggedIn" @click="onLogout()" class="global-header-link">Log out</MenuItem>
+                  <MenuItem v-if="isLoggedIn" :href="links['logout']" class="global-header-link">Logout</MenuItem>
                 </Menu>
               </div>
             </nav>
