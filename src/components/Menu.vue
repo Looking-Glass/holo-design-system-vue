@@ -42,5 +42,8 @@ export default {
 </script>
 
 <style>
-
+.vts-dropdown__trigger {
+  min-width: 40px;
+  min-height: 30px;
+}
 </style>
