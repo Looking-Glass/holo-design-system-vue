@@ -2,6 +2,7 @@
   <VAlert
     role="alert"
     class="flex p-3 rounded-md"
+    v-bind="$attrs"
     :dismissible="dismissible"
     :class="{
       'bg-utility-positive text-white' : tone === 'positive',
@@ -9,7 +10,7 @@
       'bg-utility-critical text-white' : tone === 'critical'
     }"
   >
-    {{ text }}
+    <slot />
   </VAlert>
 </template>
 
@@ -18,10 +19,6 @@ import { VAlert } from 'vuetensils/src/components';
 
 export default {
   props: {
-    text: {
-      type: String,
-      default: ''
-    },
     tone: {
       type: String,
       default: 'positive'
