@@ -72,7 +72,7 @@
               <DisclosureMenu label="Account" hideLabel :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem v-if="!isLoggedIn" @click="onLogin" :href="links['login']" class="global-header-link">Login</MenuItem>
                 <MenuItem v-if="!isLoggedIn" @click="onLogin" :href="links['signup']" class="global-header-link">Signup</MenuItem>
-                <MenuItem v-if="isLoggedIn" :href="links['profile']" class="global-header-link">Profile</MenuItem>
+                <MenuItem v-if="isLoggedIn" :href="links['profile']" target="_blank" class="global-header-link">Profile</MenuItem>
                 <MenuItem v-if="isLoggedIn" @click="onLogout" :href="links['logout']" class="global-header-link">Logout</MenuItem>
               </DisclosureMenu>
             </div>
@@ -131,7 +131,7 @@
                   </template>
                   <MenuItem v-if="!isLoggedIn" @click="onLogin" :href="links['login']" class="global-header-link">Login</MenuItem>
                   <MenuItem v-if="!isLoggedIn" @click="onLogin" :href="links['signup']" class="global-header-link">Signup</MenuItem>
-                  <MenuItem v-if="isLoggedIn" :href="links['profile']" class="global-header-link">Profile</MenuItem>
+                  <MenuItem v-if="isLoggedIn" :href="links['profile']" target="_blank" class="global-header-link">Profile</MenuItem>
                   <MenuItem v-if="isLoggedIn" @click="onLogout" :href="links['logout']" class="global-header-link">Logout</MenuItem>
                 </Menu>
               </div>
