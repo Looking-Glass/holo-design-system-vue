@@ -57,6 +57,7 @@
               <DisclosureMenu label="Explore" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
                 <MenuItem :href="links['holograms']">Holograms</MenuItem>
+                <MenuItem :href="links['whats-new']">What's New</MenuItem>
                 <MenuItem :href="links['blog']">Blog</MenuItem>
                 <MenuItem :href="links['2d3d']">2D to 3D Conversion</MenuItem>
               </DisclosureMenu>
@@ -109,6 +110,7 @@
                 <Menu label="Explore" class="global-header-link">
                   <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
                   <MenuItem :href="links['holograms']">Holograms</MenuItem>
+                  <MenuItem :href="links['whats-new']">What's New</MenuItem>
                   <MenuItem :href="links['blog']">Blog</MenuItem>
                   <MenuItem :href="links['2d3d']">2D to 3D Conversion</MenuItem>
                 </Menu>
@@ -194,6 +196,7 @@ export default {
           'docs': 'https://docs.lookingglassfactory.com',
           'how-it-works': 'https://lookingglassfactory.com/tech',
           'holograms': 'https://lookingglassfactory.com/holograms',
+          'whats-new': 'https://lookingglassfactory.com/whats-new ',
           'blog': 'https://blog.lookingglassfactory.com',
           'support': 'https://looking-glass.helpscoutdocs.com/',
           'about': 'https://lookingglassfactory.com/about',
