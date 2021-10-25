@@ -9,6 +9,9 @@
     "storybook:serve": "TAILWIND_MODE=watch vue-cli-service storybook:serve -p 6006 -c config/storybook -s public/assets",
     "viewer": "tailwind-config-viewer"
   },
+  "publishConfig": {
+    "@Looking-Glass:registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "@storybook/addon-docs": "^6.3.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
