@@ -42,9 +42,12 @@
                 <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
-              <component :is="linkComponent" :href="links['software']" class="global-header-link">
-                Software
-              </component>
+              <Menu label="Software" class="global-header-link">
+                <MenuItem :href="links['software']">Software Overview</MenuItem>
+                <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
+                <MenuItem :href="links['premium-sketchfab']">SketchFab Renderer</MenuItem>
+                <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem>
+              </Menu>
               <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
                 Solutions
               </component>
@@ -95,9 +98,12 @@
                   <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
                   <MenuItem :href="links['accessories']">Accessories</MenuItem>
                 </Menu>
-                <component :is="linkComponent" :href="links['software']" class="global-header-link">
-                  Software
-                </component>
+                <Menu label="Software" class="global-header-link">
+                  <MenuItem :href="links['software']">Software Overview</MenuItem>
+                  <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
+                  <MenuItem :href="links['premium-sketchfab']">SketchFab Renderer</MenuItem>
+                  <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem>
+                </Menu>
                 <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
                   Solutions
                 </component>
