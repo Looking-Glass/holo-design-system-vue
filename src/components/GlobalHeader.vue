@@ -37,39 +37,37 @@
             <div class="space-y-4 py-4" :hidden="!isMenuOpen" id="global-header-mobile-menu">
               <DisclosureMenu label="Products" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
                 <MenuItem :href="links['product']">Product Overview</MenuItem>
+                <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
                 <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
                 <MenuItem :href="links['4k']">Looking Glass 4K Gen2</MenuItem>
                 <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
-              <!-- <Menu label="Software" class="global-header-link">
+              <DisclosureMenu label="Software" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['software']">Software Overview</MenuItem>
+                <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
+                <MenuItem :href="links['blender']">Blender</MenuItem>
                 <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
-                <MenuItem :href="links['premium-sketchfab']">SketchFab Renderer</MenuItem>
-                <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem>
-              </Menu> -->
-              <component :is="linkComponent" :href="links['software']" class="global-header-link">
-                Software
-              </component>
-              <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
-                Solutions
-              </component>
-              <DisclosureMenu label="Learn" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['learn']">Home</MenuItem>
+                <MenuItem :href="links['software']">Downloads</MenuItem>
+                <!-- <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem> -->
+              </DisclosureMenu>
+              <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+                <MenuItem :href="links['community']">Home</MenuItem>
                 <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
                 <MenuItem :href="links['docs']">Docs</MenuItem>
                 <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
+                <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem>
+                <MenuItem :href="links['blog']">Blog</MenuItem>
+                <MenuItem :href="links['discord']">Discord</MenuItem>
               </DisclosureMenu>
-              <DisclosureMenu label="Explore" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
+              <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
+                Solutions
+              </component>
+              <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+                <MenuItem :href="links['support']">Support</MenuItem>
                 <MenuItem :href="links['holograms']">Holograms</MenuItem>
                 <MenuItem :href="links['whats-new']">What's New</MenuItem>
-                <MenuItem :href="links['blog']">Blog</MenuItem>
-                <MenuItem :href="links['2d3d']">2D to 3D Conversion</MenuItem>
               </DisclosureMenu>
-              <component :is="linkComponent" :href="links['support']" class="global-header-link">
-                Support
-              </component>
               <component :is="linkComponent" :href="links['about']" class="global-header-link">
                 About
               </component>
@@ -96,6 +94,7 @@
                 </component>
                 <Menu label="Products" class="global-header-link">
                   <MenuItem :href="links['product']">Product Overview</MenuItem>
+                  <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
                   <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
                   <MenuItem :href="links['4k']">Looking Glass 4K Gen2</MenuItem>
                   <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
@@ -103,34 +102,31 @@
                 </Menu>
                 <!-- <Menu label="Software" class="global-header-link">
                   <MenuItem :href="links['software']">Software Overview</MenuItem>
+                  <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
+                  <MenuItem :href="links['blender']">Blender</MenuItem>
                   <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
-                  <MenuItem :href="links['premium-sketchfab']">SketchFab Renderer</MenuItem>
-                  <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem>
-                </Menu> -->
-                <component :is="linkComponent" :href="links['software']" class="global-header-link">
-                  Software
-                </component>
-                <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
-                  Solutions
-                </component>
-                <Menu label="Learn" class="global-header-link">
-                  <MenuItem :href="links['learn']">Home</MenuItem>
+                  <MenuItem :href="links['software']">Downloads</MenuItem>
+                  <!-- <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem> -->
+                </Menu>
+                <Menu label="Community" class="global-header-link">
+                  <MenuItem :href="links['community']">Home</MenuItem>
                   <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
                   <MenuItem :href="links['docs']">Docs</MenuItem>
                   <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
+                  <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem>
+                  <MenuItem :href="links['blog']">Blog</MenuItem>
+                  <MenuItem :href="links['discord']">Discord</MenuItem>
                 </Menu>
-                <Menu label="Explore" class="global-header-link">
-                  <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
+                <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
+                  Solutions
+                </component>
+                <Menu label="Resources" class="global-header-link">
+                  <MenuItem :href="links['support']">Support</MenuItem>
                   <MenuItem :href="links['holograms']">Holograms</MenuItem>
                   <MenuItem :href="links['whats-new']">What's New</MenuItem>
-                  <MenuItem :href="links['blog']">Blog</MenuItem>
-                  <MenuItem :href="links['2d3d']">2D to 3D Conversion</MenuItem>
                 </Menu>
               </div>
               <div class="flex space-x-7 justify-end items-center">
-                <component :is="linkComponent" :href="links['support']" class="global-header-link">
-                  Support
-                </component>
                 <component :is="linkComponent" :href="links['about']" class="global-header-link">
                   About
                 </component>
@@ -201,7 +197,7 @@ export default {
           'accessories': 'https://lookingglassfactory.com/product/accessories',
           'software': 'https://lookingglassfactory.com/software',
           'solutions': 'https://lookingglassfactory.com/solutions',
-          'learn': 'https://learn.lookingglassfactory.com/',
+          'community': 'https://learn.lookingglassfactory.com/',
           '2d3d-marketing': 'https://lookingglassfactory.com/3d-photos',
           '2d3d': 'https://lookingglassfactory.com/account/2dto3d',
           'getting-started': 'https://learn.lookingglassfactory.com/onboarding',
@@ -213,7 +209,11 @@ export default {
           'support': 'https://looking-glass.helpscoutdocs.com/',
           'about': 'https://lookingglassfactory.com/about',
           'signup': 'https://lookingglassfactory.com/account/signup',
-          'profile': 'https://lookingglassfactory.com/account/profile'
+          'profile': 'https://lookingglassfactory.com/account/profile',
+          'ambassador-program': '/',
+          'discord': 'https://discord.gg/9jq7jhW',
+          'hopstudio': 'https://lookingglassfactory.com/holoplaystudio',
+          'blender': 'https://lookingglassfactory.com/blender-add-on'
         }
       }
     },
