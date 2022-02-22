@@ -48,7 +48,7 @@
                 <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
                   <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
                 <MenuItem :href="links['blender']">Blender</MenuItem>
-                <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
+                <MenuItem :href="links['2d3d']">2D to 3D Conversions</MenuItem>
                 <MenuItem :href="links['software']">Downloads</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
@@ -105,7 +105,7 @@
                   <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
                   <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
                   <MenuItem :href="links['blender']">Blender</MenuItem>
-                  <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
+                  <MenuItem :href="links['2d3d']">2D to 3D Conversions</MenuItem>
                   <MenuItem :href="links['software']">Downloads</MenuItem>
                 </Menu>
                 <Menu label="Community" class="global-header-link">
