@@ -71,8 +71,8 @@
               <component :is="linkComponent" :href="links['about']" class="global-header-link">
                 About
               </component>
-              <component :is="(onCartClick && cartId && typeof cartIsExpanded !== 'undefined') ? 'button' : linkComponent" :href="links['cart']" class="global-header-link" :aria-controls="cartId" :aria-expanded="cartIsExpanded">
-                Cart
+              <component :is="(onCartClick && cartId && typeof cartIsExpanded !== 'undefined') ? 'button' : linkComponent" :href="links['cart']" class="global-header-link" :aria-controls="cartId" :aria-expanded="cartIsExpanded" @click="onCartClick() || false">
+                <span class="js-cart-toggle">Cart</span>
               </component>
               <DisclosureMenu label="Account" hideLabel :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem v-if="!isLoggedIn" @click="onLogin" :href="links['login']" class="global-header-link">Login/Signup</MenuItem>
@@ -100,7 +100,7 @@
                   <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
                   <MenuItem :href="links['accessories']">Accessories</MenuItem>
                 </Menu>
-                <Menu label="Software" class="global-header-link">
+                <!-- <Menu label="Software" class="global-header-link">
                   <MenuItem :href="links['software']">Software Overview</MenuItem>
                   <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
                   <MenuItem :href="links['blender']">Blender</MenuItem>
