@@ -14,6 +14,7 @@
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@vue-a11y/focus-loop": "^0.2.0",
+    "cache-loader": "^4.1.0",
     "core-js": "^3.6.5",
     "polished": "^4.1.3",
     "portal-vue": "^2.1.7",
