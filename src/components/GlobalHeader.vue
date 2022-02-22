@@ -44,9 +44,9 @@
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Software" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['software']">Software Overview</MenuItem>
+                <!-- <MenuItem :href="links['software']">Software Overview</MenuItem> -->
                 <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
-                  <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem>
+                  <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
                 <MenuItem :href="links['blender']">Blender</MenuItem>
                 <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
                 <MenuItem :href="links['software']">Downloads</MenuItem>
@@ -56,7 +56,7 @@
                 <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
                 <MenuItem :href="links['docs']">Docs</MenuItem>
                 <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
-                <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem>
+                <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
                 <MenuItem :href="links['blog']">Blog</MenuItem>
                 <MenuItem :href="links['discord']">Discord</MenuItem>
               </DisclosureMenu>
@@ -101,9 +101,9 @@
                   <MenuItem :href="links['accessories']">Accessories</MenuItem>
                 </Menu>
                 <Menu label="Software" class="global-header-link">
-                  <MenuItem :href="links['software']">Software Overview</MenuItem>
+                  <!-- <MenuItem :href="links['software']">Software Overview</MenuItem> -->
                   <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
-                  <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem>
+                  <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
                   <MenuItem :href="links['blender']">Blender</MenuItem>
                   <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
                   <MenuItem :href="links['software']">Downloads</MenuItem>
@@ -113,7 +113,7 @@
                   <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
                   <MenuItem :href="links['docs']">Docs</MenuItem>
                   <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
-                  <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem>
+                  <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
                   <MenuItem :href="links['blog']">Blog</MenuItem>
                   <MenuItem :href="links['discord']">Discord</MenuItem>
                 </Menu>
