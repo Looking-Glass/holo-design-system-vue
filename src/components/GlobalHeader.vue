@@ -46,10 +46,10 @@
               <DisclosureMenu label="Software" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['software']">Software Overview</MenuItem>
                 <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
+                  <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem>
                 <MenuItem :href="links['blender']">Blender</MenuItem>
                 <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
                 <MenuItem :href="links['software']">Downloads</MenuItem>
-                <!-- <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem> -->
               </DisclosureMenu>
               <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['community']">Home</MenuItem>
@@ -103,10 +103,10 @@
                 <Menu label="Software" class="global-header-link">
                   <MenuItem :href="links['software']">Software Overview</MenuItem>
                   <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
+                  <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem>
                   <MenuItem :href="links['blender']">Blender</MenuItem>
                   <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
                   <MenuItem :href="links['software']">Downloads</MenuItem>
-                  <!-- <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem> -->
                 </Menu>
                 <Menu label="Community" class="global-header-link">
                   <MenuItem :href="links['community']">Home</MenuItem>
@@ -213,6 +213,7 @@ export default {
           'ambassador-program': '/',
           'discord': 'https://discord.gg/9jq7jhW',
           'hopstudio': 'https://lookingglassfactory.com/holoplaystudio',
+          'unity': '/',
           'blender': 'https://lookingglassfactory.com/blender-add-on'
         }
       }
