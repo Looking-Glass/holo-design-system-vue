@@ -100,7 +100,7 @@
                   <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
                   <MenuItem :href="links['accessories']">Accessories</MenuItem>
                 </Menu>
-                <!-- <Menu label="Software" class="global-header-link">
+                <Menu label="Software" class="global-header-link">
                   <MenuItem :href="links['software']">Software Overview</MenuItem>
                   <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
                   <MenuItem :href="links['blender']">Blender</MenuItem>
