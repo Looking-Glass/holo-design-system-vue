@@ -52,13 +52,13 @@
                 <MenuItem :href="links['software']">Downloads</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['community']">Home</MenuItem>
-                <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
-                <MenuItem :href="links['docs']">Docs</MenuItem>
+                <MenuItem :href="links['community']" target="_blank">Home</MenuItem>
+                <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
+                <MenuItem :href="links['docs']" target="_blank">Docs</MenuItem>
                 <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
                 <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
-                <MenuItem :href="links['blog']">Blog</MenuItem>
-                <MenuItem :href="links['discord']">Discord</MenuItem>
+                <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
+                <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
               </DisclosureMenu>
               <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
                 Solutions
@@ -109,13 +109,13 @@
                   <MenuItem :href="links['software']">Downloads</MenuItem>
                 </Menu>
                 <Menu label="Community" class="global-header-link">
-                  <MenuItem :href="links['community']">Home</MenuItem>
-                  <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
-                  <MenuItem :href="links['docs']">Docs</MenuItem>
+                  <MenuItem :href="links['community']" target="_blank">Home</MenuItem>
+                  <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
+                  <MenuItem :href="links['docs']" target="_blank">Docs</MenuItem>
                   <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
                   <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
-                  <MenuItem :href="links['blog']">Blog</MenuItem>
-                  <MenuItem :href="links['discord']">Discord</MenuItem>
+                  <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
+                  <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
                 </Menu>
                 <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
                   Solutions
