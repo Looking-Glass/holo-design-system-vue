@@ -63,7 +63,7 @@
                 Solutions
               </component>
               <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['support']">Support</MenuItem>
+                <MenuItem :href="links['support']" target="_blank">Support</MenuItem>
                 <MenuItem :href="links['docs']" target="_blank">Documentation</MenuItem>
                 <MenuItem :href="links['holograms']">Holograms</MenuItem>
                 <MenuItem :href="links['whats-new']">What's New</MenuItem>
