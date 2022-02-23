@@ -120,7 +120,7 @@
                   Solutions
                 </component>
                 <Menu label="Resources" class="global-header-link">
-                  <MenuItem :href="links['support']">Support</MenuItem>
+                  <MenuItem :href="links['support']" target="_blank">Support</MenuItem>
                   <MenuItem :href="links['docs']" target="_blank">Documentation</MenuItem>
                   <MenuItem :href="links['holograms']">Holograms</MenuItem>
                   <MenuItem :href="links['whats-new']">What's New</MenuItem>
