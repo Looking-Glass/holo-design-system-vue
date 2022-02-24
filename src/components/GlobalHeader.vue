@@ -54,6 +54,7 @@
               <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['community']" target="_blank">Home</MenuItem>
                 <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
+                <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
                 <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
                 <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
                 <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
@@ -111,6 +112,7 @@
                 <Menu label="Community" class="global-header-link">
                   <MenuItem :href="links['community']" target="_blank">Home</MenuItem>
                   <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
+                  <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
                   <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
                   <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
                   <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
@@ -201,6 +203,7 @@ export default {
           '2d3d-marketing': 'https://lookingglassfactory.com/3d-photos',
           '2d3d': 'https://lookingglassfactory.com/account/2dto3d',
           'getting-started': 'https://learn.lookingglassfactory.com/onboarding',
+          'refferal-program': 'https://learn.lookingglassfactory.com/tutorials/referral-program',
           'docs': 'https://docs.lookingglassfactory.com',
           'how-it-works': 'https://lookingglassfactory.com/tech',
           'holograms': 'https://lookingglassfactory.com/holograms',
