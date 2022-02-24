@@ -203,7 +203,7 @@ export default {
           '2d3d-marketing': 'https://lookingglassfactory.com/3d-photos',
           '2d3d': 'https://lookingglassfactory.com/account/2dto3d',
           'getting-started': 'https://learn.lookingglassfactory.com/onboarding',
-          'refferal-program': 'https://learn.lookingglassfactory.com/tutorials/referral-program',
+          'referral-program': 'https://learn.lookingglassfactory.com/tutorials/referral-program',
           'docs': 'https://docs.lookingglassfactory.com',
           'how-it-works': 'https://lookingglassfactory.com/tech',
           'holograms': 'https://lookingglassfactory.com/holograms',
