@@ -63,7 +63,7 @@
               </DisclosureMenu>
                <DisclosureMenu label="Enterprise" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                   <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
-                  <MenuItem :href="links['medical-science-visualization']">Medical/Science visualization</MenuItem>
+                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
                   <MenuItem :href="links['resellers']">Resellers</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
@@ -124,7 +124,7 @@
                 </Menu>
                 <Menu label="Enterprise" class="global-header-link">
                   <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
-                  <MenuItem :href="links['medical-science-visualization']">Medical/Science visualization</MenuItem>
+                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
                   <MenuItem :href="links['resellers']">Resellers</MenuItem>
 
                 </Menu>
