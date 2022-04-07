@@ -44,27 +44,31 @@
                 <MenuItem :href="links['accessories']">Accessories</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Software" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['software']">Software Overview</MenuItem>
+                <!-- <MenuItem :href="links['software']">Software Overview</MenuItem> -->
                 <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
+                  <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
+                <MenuItem :href="links['unity']">Unity</MenuItem>
                 <MenuItem :href="links['blender']">Blender</MenuItem>
-                <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
+                <MenuItem :href="links['2d3d']">2D to 3D Conversions</MenuItem>
                 <MenuItem :href="links['software']">Downloads</MenuItem>
-                <!-- <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem> -->
               </DisclosureMenu>
               <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['community']">Home</MenuItem>
-                <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
-                <MenuItem :href="links['docs']">Docs</MenuItem>
+                <MenuItem :href="links['community']" target="_blank">Learn</MenuItem>
+                <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
+                <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
                 <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
-                <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem>
-                <MenuItem :href="links['blog']">Blog</MenuItem>
-                <MenuItem :href="links['discord']">Discord</MenuItem>
+                <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
+                <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
+                <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
               </DisclosureMenu>
-              <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
-                Solutions
-              </component>
+               <DisclosureMenu label="Enterprise" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+                  <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
+                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
+                  <MenuItem :href="links['resellers']">Resellers</MenuItem>
+              </DisclosureMenu>
               <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['support']">Support</MenuItem>
+                <MenuItem :href="links['support']" target="_blank">Support</MenuItem>
+                <MenuItem :href="links['docs']" target="_blank">Documentation</MenuItem>
                 <MenuItem :href="links['holograms']">Holograms</MenuItem>
                 <MenuItem :href="links['whats-new']">What's New</MenuItem>
               </DisclosureMenu>
@@ -100,28 +104,33 @@
                   <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
                   <MenuItem :href="links['accessories']">Accessories</MenuItem>
                 </Menu>
-                <!-- <Menu label="Software" class="global-header-link">
-                  <MenuItem :href="links['software']">Software Overview</MenuItem>
+                <Menu label="Software" class="global-header-link">
+                  <!-- <MenuItem :href="links['software']">Software Overview</MenuItem> -->
                   <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
+                  <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
+                  <MenuItem :href="links['unity']">Unity</MenuItem>
                   <MenuItem :href="links['blender']">Blender</MenuItem>
-                  <MenuItem :href="links['premium-2d3d']">2D to 3D Conversions</MenuItem>
+                  <MenuItem :href="links['2d3d']">2D to 3D Conversions</MenuItem>
                   <MenuItem :href="links['software']">Downloads</MenuItem>
-                  <!-- <MenuItem :href="links['premium-unity']">Unity Extensions</MenuItem> -->
                 </Menu>
                 <Menu label="Community" class="global-header-link">
-                  <MenuItem :href="links['community']">Home</MenuItem>
-                  <MenuItem :href="links['getting-started']">Getting Started</MenuItem>
-                  <MenuItem :href="links['docs']">Docs</MenuItem>
+                  <MenuItem :href="links['community']" target="_blank">Learn</MenuItem>
+                  <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
+                  <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
                   <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
-                  <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem>
-                  <MenuItem :href="links['blog']">Blog</MenuItem>
-                  <MenuItem :href="links['discord']">Discord</MenuItem>
+                  <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
+                  <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
+                  <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
                 </Menu>
-                <component :is="linkComponent" :href="links['solutions']" class="global-header-link">
-                  Solutions
-                </component>
+                <Menu label="Enterprise" class="global-header-link">
+                  <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
+                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
+                  <MenuItem :href="links['resellers']">Resellers</MenuItem>
+
+                </Menu>
                 <Menu label="Resources" class="global-header-link">
-                  <MenuItem :href="links['support']">Support</MenuItem>
+                  <MenuItem :href="links['support']" target="_blank">Support</MenuItem>
+                  <MenuItem :href="links['docs']" target="_blank">Documentation</MenuItem>
                   <MenuItem :href="links['holograms']">Holograms</MenuItem>
                   <MenuItem :href="links['whats-new']">What's New</MenuItem>
                 </Menu>
@@ -201,6 +210,7 @@ export default {
           '2d3d-marketing': 'https://lookingglassfactory.com/3d-photos',
           '2d3d': 'https://lookingglassfactory.com/account/2dto3d',
           'getting-started': 'https://learn.lookingglassfactory.com/onboarding',
+          'referral-program': 'https://lookingglassfactory.com/referral',
           'docs': 'https://docs.lookingglassfactory.com',
           'how-it-works': 'https://lookingglassfactory.com/tech',
           'holograms': 'https://lookingglassfactory.com/holograms',
@@ -211,8 +221,9 @@ export default {
           'signup': 'https://lookingglassfactory.com/account/signup',
           'profile': 'https://lookingglassfactory.com/account/profile',
           'ambassador-program': '/',
-          'discord': 'https://discord.gg/9jq7jhW',
+          'discord': 'https://look.glass/discord',
           'hopstudio': 'https://lookingglassfactory.com/holoplaystudio',
+          'unity': '/',
           'blender': 'https://lookingglassfactory.com/blender-add-on'
         }
       }
