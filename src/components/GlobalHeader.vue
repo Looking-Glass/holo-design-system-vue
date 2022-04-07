@@ -56,7 +56,7 @@
                 <MenuItem :href="links['community']" target="_blank">Learn</MenuItem>
                 <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
                 <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
-                <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
+                <!-- <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem> -->
                 <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
                 <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
                 <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
@@ -117,7 +117,7 @@
                   <MenuItem :href="links['community']" target="_blank">Learn</MenuItem>
                   <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
                   <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
-                  <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem>
+                  <!-- <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem> -->
                   <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
                   <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
                   <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
