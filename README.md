@@ -20,5 +20,9 @@ yarn build
 yarn lint
 ```
 
+## Preview storybook
+```
+yarn storybook:serve
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
