@@ -25,7 +25,7 @@
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
                 <img :src="logo" alt="Looking Glass Factory Logo" class="w-[60px] min-w-[40px]"/>
               </component>
-              <Button variant="secondary" @click="toggleMenu" aria-controls="global-header-mobile-menu" :aria-expanded="isMenuOpen">
+              <Button variant="secondary" color="white" @click="toggleMenu" aria-controls="global-header-mobile-menu" :aria-expanded="isMenuOpen">
                 <span v-if="!isMenuOpen">
                   Menu
                 </span>
@@ -35,36 +35,18 @@
               </Button>
             </div>
             <div class="space-y-4 py-4" :hidden="!isMenuOpen" id="global-header-mobile-menu">
-              <DisclosureMenu label="Products" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
-                <MenuItem :href="links['product']">Product Overview</MenuItem>
-                <MenuItem :href="links['how-it-works']">How It Works</MenuItem>
-                <MenuItem :href="links['portrait']">Looking Glass Portrait</MenuItem>
-                <MenuItem :href="links['4k']">Looking Glass 4K Gen2</MenuItem>
-                <MenuItem :href="links['8k']">Looking Glass 8K Gen2</MenuItem>
-                <MenuItem :href="links['accessories']">Accessories</MenuItem>
+              <DisclosureMenu label="Create" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
+                <MenuItem :href="links['create-holograms-in-unity']">Holograms in Unity</MenuItem>
+                <MenuItem :href="links['create-holograms-in-unreal']">Holograms in Unreal</MenuItem>
+                <MenuItem :href="links['create-holograms-in-blender']">Holograms in Blender</MenuItem>
+                <MenuItem :href="links['create-holograms-from-phones']">Holograms from Phones</MenuItem>
+                <MenuItem :href="links['create-holograms-from-2D-images']">Holograms from 2D images</MenuItem>
+                <MenuItem :href="links['create-hologram-learn-hub']">Hologram Learn Hub</MenuItem>
               </DisclosureMenu>
-              <DisclosureMenu label="Software" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <!-- <MenuItem :href="links['software']">Software Overview</MenuItem> -->
-                <MenuItem :href="links['hopstudio']">HoloPlay Studio</MenuItem>
-                  <!-- <MenuItem :href="links['unity']">Unity & Unreal plugins</MenuItem> -->
-                <MenuItem :href="links['unity']">Unity</MenuItem>
-                <MenuItem :href="links['blender']">Blender</MenuItem>
-                <MenuItem :href="links['2d3d']">2D to 3D Conversions</MenuItem>
-                <MenuItem :href="links['software']">Downloads</MenuItem>
-              </DisclosureMenu>
-              <DisclosureMenu label="Community" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['community']" target="_blank">Learn</MenuItem>
-                <MenuItem :href="links['getting-started']" target="_blank">Getting Started</MenuItem>
-                <MenuItem :href="links['referral-program']" target="_blank">Referral Program</MenuItem>
-                <!-- <MenuItem :href="links['2d3d-marketing']">2D to 3D Photos</MenuItem> -->
-                <!-- <MenuItem :href="links['ambassador-program']">Ambassador Program</MenuItem> -->
-                <MenuItem :href="links['blog']" target="_blank">Blog</MenuItem>
-                <MenuItem :href="links['discord']" target="_blank">Discord</MenuItem>
-              </DisclosureMenu>
-               <DisclosureMenu label="Enterprise" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                  <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
-                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
-                  <MenuItem :href="links['resellers']">Resellers</MenuItem>
+              <DisclosureMenu label="Display" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+                <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays (Portrait, 16", 32")</MenuItem>
+                <MenuItem :href="links['display-65-inch']">(New!) Massive holographic displays (Looking Glass 65")</MenuItem>
+                <MenuItem :href="links['display-getting-started']">Getting started with your holographic display</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['resources-support']" target="_blank">Support</MenuItem>
@@ -74,8 +56,13 @@
                 <MenuItem :href="links['resources-learn']" target="_blank">Hologram Learn Hub</MenuItem>
                 <MenuItem :href="links['resources-blog']" target="_blank">Blog</MenuItem>
               </DisclosureMenu>
-              <component :is="linkComponent" :href="links['about']" class="global-header-link">
-                About
+               <DisclosureMenu label="Enterprise" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+                  <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
+                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
+                  <MenuItem :href="links['resellers']">Resellers</MenuItem>
+              </DisclosureMenu>
+              <component :is="linkComponent" :href="links['business']" class="global-header-link">
+                For Business
               </component>
               <component :is="(onCartClick && cartId && typeof cartIsExpanded !== 'undefined') ? 'button' : linkComponent" :href="links['cart']" class="global-header-link" :aria-controls="cartId" :aria-expanded="cartIsExpanded" @click="onCartClick() || false">
                 <span class="js-cart-toggle">Cart</span>
@@ -188,7 +175,7 @@ export default {
       type: Object,
       default() {
         return {
-          'home': '/',
+          home: '/',
           'create-holograms-in-unity': 'https://lookingglassfactory.com/software#holoplay-unity-plugin',
           'create-holograms-in-unreal': 'https://lookingglassfactory.com/software#holoplay-plugin-for-unreal-engine',
           'create-holograms-in-blender': 'https://lookingglassfactory.com/blender-add-on',
@@ -205,7 +192,7 @@ export default {
           'resources-discord': 'https://discord.com/invite/lookingglassfactory',
           'resources-learn': 'https://learn.lookingglassfactory.com/',
           'resources-blog': 'https://blog.lookingglassfactory.com/',
-          'business': 'https://lookingglassfactory.com/solutions'
+          business: 'https://lookingglassfactory.com/solutions'
           // 'product': 'https://lookingglassfactory.com/product/overview',
           // 'portrait': 'https://lookingglassfactory.com/portrait',
           // '4k': 'https://lookingglassfactory.com/4k',
