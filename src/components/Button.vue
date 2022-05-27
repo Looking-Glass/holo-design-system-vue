@@ -14,10 +14,10 @@
       'rounded-sm' : shape === 'square',
       
       // Primary + Brand
-      'bg-brand-default border border-brand-default text-white': color === 'brand' && variant === 'primary',
+      'bg-white border border-white text-black': color === 'brand' && variant === 'primary',
 
       // Primary + White
-      'bg-white border border-white text-brand-default': color === 'white' && variant === 'primary',
+      'bg-white border border-white text-black': color === 'white' && variant === 'primary',
 
       // Primary + Black
       'bg-black border border-black text-white': color === 'black' && variant === 'primary',

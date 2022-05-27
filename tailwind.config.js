@@ -53,9 +53,11 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Neue Haas', 'sans-serif'],
+      sans: ['Neue Montreal', 'Neue Haas', 'sans-serif'],
       'sans-alt': ['Neue Haas', 'sans-serif'],
       serif: ['Editorial New', 'serif'],
+      'pp-neue': ['PP Neue Bit', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
+      'ms-sans-serif': ['MS Sans Serif', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'],
     },
     fontSize: {
       '5xl': between('64px', '132px', '400px', '1200px'),
