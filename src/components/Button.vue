@@ -1,17 +1,14 @@
 <template>
   <component
     :is="component"
-    class="cursor-pointer text-center flex place-items-center place-content-center font-sans hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+    class="cursor-pointer text-center flex place-items-center place-content-center font-sans hover:opacity-80 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed leading-none"
     @click="emitClick"
     v-bind="$attrs"
     :class="{
       // Sizes
-      'px-4 py-1.5 text-sm': size === 'small',
-      'px-5 py-2.5 text-base': size === 'large',
-
-      // Shapes
-      'rounded-3xl' : shape === 'rounded',
-      'rounded-sm' : shape === 'square',
+      'px-4 py-1.5 text-sm rounded-3xl': size === 'small',
+      'px-5 py-2.5 text-base rounded-3xl': size === 'large',
+      'px-2.5 py-1.5 text-xl rounded-[40px]': size === 'extralarge',
       
       // Primary + Brand
       'bg-white border border-white text-black': color === 'brand' && variant === 'primary',
