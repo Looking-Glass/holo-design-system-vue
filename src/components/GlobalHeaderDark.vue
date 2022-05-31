@@ -2,7 +2,6 @@
   <div class="block overflow-visible text-white">
     <div
       class="fixed top-0 left-0 w-full z-40 transition-all global-header-solid-bg"
-      :class="{ 'border-gray-800 border-b' : solidBackground }"
       :style="`transform: translateY(${headerTransform})`"
     >
       <div ref="topHeader">
@@ -34,7 +33,7 @@
                 </span>
               </Button>
             </div>
-            <div class="space-y-4 py-4" :hidden="!isMenuOpen" id="global-header-mobile-menu">
+            <div class="space-y-4 bg-black rounded-md bg-opacity-70 backdrop-blur-lg p-4" :hidden="!isMenuOpen" id="global-header-mobile-menu">
               <DisclosureMenu label="Create" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2 rounded-md' }">
                 <MenuItem :href="links['create-holograms-in-unity']">Holograms in Unity</MenuItem>
                 <MenuItem :href="links['create-holograms-in-unreal']">Holograms in Unreal</MenuItem>
@@ -192,7 +191,7 @@ export default {
           'resources-discord': 'https://discord.com/invite/lookingglassfactory',
           'resources-learn': 'https://learn.lookingglassfactory.com/',
           'resources-blog': 'https://blog.lookingglassfactory.com/',
-          business: 'https://lookingglassfactory.com/solutions'
+          business: 'https://lookingglassfactory.com/resellers'
           // 'product': 'https://lookingglassfactory.com/product/overview',
           // 'portrait': 'https://lookingglassfactory.com/portrait',
           // '4k': 'https://lookingglassfactory.com/4k',
@@ -346,11 +345,11 @@ export default {
 
 <style>
 .global-header-link {
-  @apply font-ms-sans-serif text-sm cursor-pointer block text-white;
+  @apply font-sans text-base cursor-pointer block text-white;
 }
 
 .global-header-solid-bg {
-  @apply bg-black bg-opacity-50 backdrop-blur-lg;
+  /* @apply bg-black bg-opacity-50 backdrop-blur-lg; */
   /* -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px); */
 }
