@@ -55,13 +55,8 @@
                 <MenuItem :href="links['resources-learn']" target="_blank">Hologram Learn Hub</MenuItem>
                 <MenuItem :href="links['resources-blog']" target="_blank">Blog</MenuItem>
               </DisclosureMenu>
-               <DisclosureMenu label="Enterprise" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                  <MenuItem :href="links['experiential-marketing']">Experiential Marketing</MenuItem>
-                  <MenuItem :href="links['medical-science-visualization']">Medical/Science Visualization</MenuItem>
-                  <MenuItem :href="links['resellers']">Resellers</MenuItem>
-              </DisclosureMenu>
               <component :is="linkComponent" :href="links['business']" class="global-header-link">
-                For Business
+                Resellers
               </component>
               <component :is="(onCartClick && cartId && typeof cartIsExpanded !== 'undefined') ? 'button' : linkComponent" :href="links['cart']" class="global-header-link" :aria-controls="cartId" :aria-expanded="cartIsExpanded" @click="onCartClick() || false">
                 <span class="js-cart-toggle">Cart</span>
@@ -113,7 +108,7 @@
                   <MenuItem :href="links['resources-blog']" target="_blank">Blog</MenuItem>
                 </Menu>
                 <component :is="linkComponent" :href="links['business']" class="global-header-link">
-                  For Business
+                  Resellers
                 </component>
                 <component :is="(onCartClick && cartId && typeof cartIsExpanded !== 'undefined') ? 'button' : linkComponent" :href="links['cart']" class="global-header-link" :aria-controls="cartId" :aria-expanded="cartIsExpanded" @click="onCartClick() || false">
                   <svg width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="js-cart-toggle"><path d="M1.458.5a.625.625 0 100 1.25h1.149a.62.62 0 01.613.508l.125.65 1.343 7.057a2.716 2.716 0 002.661 2.202h7.802a2.715 2.715 0 002.66-2.202l1.344-7.056a.627.627 0 00-.613-.742H4.475l-.027-.143A1.882 1.882 0 002.607.5H1.458zm3.256 2.917h13.072l-1.202 6.315a1.452 1.452 0 01-1.433 1.185H7.349c-.704 0-1.3-.494-1.433-1.185V9.73L4.714 3.417zM8.334 13a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zm5.833 0a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" fill="currentColor"></path></svg>
