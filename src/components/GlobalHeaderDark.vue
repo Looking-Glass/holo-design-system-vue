@@ -6,7 +6,7 @@
     >
       <div ref="topHeader">
         <div v-if="hasCallout && calloutVisible">
-          <div class="bg-white text-black text-center p-2">
+          <div class="bg-black text-white bg-opacity-70 backdrop-blur-xl text-center p-2">
             <Container size="full">
               <div class="relative">
                 <slot name="callout">
