@@ -3,10 +3,10 @@
     class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium"
     :class="{
       // Primary + Brand
-      'bg-brand-default border border-brand-default text-white': color === 'brand' && variant === 'primary',
+      'bg-white border border-white text-black': color === 'brand' && variant === 'primary',
 
       // Primary + White
-      'bg-white border border-white text-brand-default': color === 'white' && variant === 'primary',
+      'bg-white border border-white text-black': color === 'white' && variant === 'primary',
 
       // Primary + Black
       'bg-black border border-black text-white': color === 'black' && variant === 'primary',
@@ -28,7 +28,7 @@
       'border border-current': variant === 'secondary',
 
       // Secondary/Tertiary + Brand
-      'text-brand-default': color === 'brand' && variant === 'secondary',
+      'text-white': color === 'brand' && variant === 'secondary',
 
       // Secondary/Tertiary + White
       'text-white': color === 'white' && variant === 'secondary',
