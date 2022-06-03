@@ -4,7 +4,7 @@
       <slot />
     </component>
     <template #tooltip>
-      <div class="bg-brand-default text-white p-2 rounded-md text-sm">
+      <div class="bg-gray-800 text-white p-2 rounded-md text-sm">
         {{ text }}
       </div>
     </template>

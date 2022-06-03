@@ -344,7 +344,7 @@ export default {
 }
 
 .global-header-solid-bg {
-  /* @apply bg-black bg-opacity-50 backdrop-blur-lg; */
+  @apply bg-white bg-opacity-10 backdrop-blur-lg;
   /* -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px); */
 }

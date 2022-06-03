@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-solid border-gray-300 rounded-lg w-full">
+  <div class="border border-solid border-gray-800 rounded-lg w-full">
     <button
       :aria-expanded="open"
       :aria-controls="id"

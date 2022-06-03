@@ -36,7 +36,7 @@
       'border border-current': variant === 'secondary',
 
       // Secondary/Tertiary + Brand
-      'text-brand-default': color === 'brand' && (variant === 'secondary' || variant === 'tertiary'),
+      'text-white': color === 'brand' && (variant === 'secondary' || variant === 'tertiary'),
 
       // Secondary/Tertiary + White
       'text-white': color === 'white' && (variant === 'secondary' || variant === 'tertiary'),
