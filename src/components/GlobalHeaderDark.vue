@@ -50,7 +50,7 @@
                 <MenuItem :href="links['share-block']">Project: Looking Glass Block</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Display" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['display-holographic-displays']">Looking Glass Protrait</MenuItem>
+                <MenuItem :href="links['display-holographic-displays']">Looking Glass Portrait</MenuItem>
                 <MenuItem :href="links['display-holographic-displays']">Looking Glass 16"</MenuItem>
                 <MenuItem :href="links['display-holographic-displays']">Looking Glass 32"</MenuItem>
                 <MenuItem :href="links['display-65-inch']">Looking Glass 65"</MenuItem>
