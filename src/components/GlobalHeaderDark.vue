@@ -18,7 +18,11 @@
             </Container>
           </div>
         </div>
-        <header class="lg:hidden global-header-solid-bg" ref="mobileHeader">
+        <header
+          class="lg:hidden global-header-solid-bg"
+          :class="{'pb-4' : isMenuOpen}"
+          ref="mobileHeader"
+        >
           <Container size="full" :class="{'border-b border-gray-700 pb-1' : hasSubnav && showSubnav}">
             <div class="grid items-center justify-between content-between grid-flow-col auto-cols-auto py-2">
               <component :is="linkComponent" :href="links['home']" class="global-header-link">
@@ -42,9 +46,12 @@
                 <MenuItem :href="links['create-holograms-from-2D-images']">Holograms from 2D images</MenuItem>
                 <MenuItem :href="links['create-hologram-learn-hub']">Hologram Learn Hub</MenuItem>
               </DisclosureMenu>
+              <DisclosureMenu label="Share" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
+                <MenuItem :href="links['share-block']">Pilot program: Looking Glass Block</MenuItem>
+              </DisclosureMenu>
               <DisclosureMenu label="Display" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays (Portrait, 16", 32")</MenuItem>
-                <MenuItem :href="links['display-65-inch']">(New!) Massive holographic displays (Looking Glass 65")</MenuItem>
+                <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays</MenuItem>
+                <MenuItem :href="links['display-65-inch']">Massive holographic displays (New!)</MenuItem>
                 <MenuItem :href="links['display-getting-started']">Getting started with your holographic display</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
@@ -73,7 +80,7 @@
           class="hidden lg:block"
           ref="desktopHeader"
         >
-          <Container size="large" :class="{'border-b border-gray-700' : hasSubnav && showSubnav}">
+          <Container size="large" :class="{'border-b border-white border-opacity-20' : hasSubnav && showSubnav}">
             <nav class="grid grid-cols-3 gap-4 justify-between items-center py-4">
               <div class="flex gap-7 items-center">
                 <Menu label="Create" class="global-header-link">
@@ -88,8 +95,8 @@
                   <MenuItem :href="links['share-block']">Pilot program: Looking Glass Block</MenuItem>
                 </Menu>
                 <Menu label="Display" class="global-header-link">
-                  <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays (Portrait, 16", 32")</MenuItem>
-                  <MenuItem :href="links['display-65-inch']">(New!) Massive holographic displays (Looking Glass 65")</MenuItem>
+                  <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays</MenuItem>
+                  <MenuItem :href="links['display-65-inch']">Massive holographic displays (New!)</MenuItem>
                   <MenuItem :href="links['display-getting-started']">Getting started with your holographic display</MenuItem>
                 </Menu>
               </div>
@@ -169,7 +176,7 @@ export default {
       type: Object,
       default() {
         return {
-          home: '/',
+          home: 'https://lookingglassfactory.com/',
           'create-holograms-in-unity': 'https://lookingglassfactory.com/software#holoplay-unity-plugin',
           'create-holograms-in-unreal': 'https://lookingglassfactory.com/software#holoplay-plugin-for-unreal-engine',
           'create-holograms-in-blender': 'https://lookingglassfactory.com/blender-add-on',
@@ -179,7 +186,7 @@ export default {
           'display-holographic-displays': 'https://lookingglassfactory.com/product/overview',
           'display-65-inch': 'https://lookingglassfactory.com/looking-glass-65',
           'display-getting-started': 'https://learn.lookingglassfactory.com/onboarding',
-          'share-block': 'https://host.glass',
+          'share-block': 'https://hologramsontheinternet.com',
           'resources-support': 'https://looking-glass.helpscoutdocs.com/',
           'resources-downloads': 'https://lookingglassfactory.com/software',
           'resources-docs': 'https://docs.lookingglassfactory.com/',
