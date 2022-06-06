@@ -43,16 +43,18 @@
                 <MenuItem :href="links['create-holograms-in-unreal']">Holograms in Unreal</MenuItem>
                 <MenuItem :href="links['create-holograms-in-blender']">Holograms in Blender</MenuItem>
                 <MenuItem :href="links['create-holograms-from-phones']">Holograms from Phones</MenuItem>
-                <MenuItem :href="links['create-holograms-from-2D-images']">Holograms from 2D images</MenuItem>
+                <MenuItem :href="links['create-holograms-from-2D-images']">Holograms from 2D Images</MenuItem>
                 <MenuItem :href="links['create-hologram-learn-hub']">Hologram Learn Hub</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Share" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['share-block']">Pilot program: Looking Glass Block</MenuItem>
+                <MenuItem :href="links['share-block']">Project: Looking Glass Block</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Display" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
-                <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays</MenuItem>
-                <MenuItem :href="links['display-65-inch']">Massive holographic displays (New!)</MenuItem>
-                <MenuItem :href="links['display-getting-started']">Getting started with your holographic display</MenuItem>
+                <MenuItem :href="links['display-holographic-displays']">Looking Glass Protrait</MenuItem>
+                <MenuItem :href="links['display-holographic-displays']">Looking Glass 16"</MenuItem>
+                <MenuItem :href="links['display-holographic-displays']">Looking Glass 32"</MenuItem>
+                <MenuItem :href="links['display-65-inch']">Looking Glass 65"</MenuItem>
+                <MenuItem :href="links['display-getting-started']">Getting Started with Your Looking Glass</MenuItem>
               </DisclosureMenu>
               <DisclosureMenu label="Resources" :classes="{ wrapper: 'w-full', trigger: 'w-full global-header-link', menu: 'py-2' }">
                 <MenuItem :href="links['resources-support']" target="_blank">Support</MenuItem>
@@ -92,12 +94,14 @@
                   <MenuItem :href="links['create-hologram-learn-hub']">Hologram Learn Hub</MenuItem>
                 </Menu>
                 <Menu label="Share" class="global-header-link">
-                  <MenuItem :href="links['share-block']">Pilot program: Looking Glass Block</MenuItem>
+                  <MenuItem :href="links['share-block']">Project: Looking Glass Block</MenuItem>
                 </Menu>
                 <Menu label="Display" class="global-header-link">
-                  <MenuItem :href="links['display-holographic-displays']">Desktop holographic displays</MenuItem>
-                  <MenuItem :href="links['display-65-inch']">Massive holographic displays (New!)</MenuItem>
-                  <MenuItem :href="links['display-getting-started']">Getting started with your holographic display</MenuItem>
+                  <MenuItem :href="links['display-holographic-displays']">Looking Glass Portrait</MenuItem>
+                  <MenuItem :href="links['display-holographic-displays']">Looking Glass 16"</MenuItem>
+                  <MenuItem :href="links['display-holographic-displays']">Looking Glass 32"</MenuItem>
+                  <MenuItem :href="links['display-65-inch']">Looking Glass 65"</MenuItem>
+                  <MenuItem :href="links['display-getting-started']">Getting Started with Your Looking Glass</MenuItem>
                 </Menu>
               </div>
               <div class="text-center">
