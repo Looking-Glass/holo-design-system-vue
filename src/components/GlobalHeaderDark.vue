@@ -90,7 +90,7 @@
                   <MenuItem :href="links['create-holograms-in-unreal']">Holograms in Unreal</MenuItem>
                   <MenuItem :href="links['create-holograms-in-blender']">Holograms in Blender</MenuItem>
                   <MenuItem :href="links['create-holograms-from-phones']">Holograms from Phones</MenuItem>
-                  <MenuItem :href="links['create-holograms-from-2D-images']">Holograms from 2D images</MenuItem>
+                  <MenuItem :href="links['create-holograms-from-2D-images']">Holograms from 2D Images</MenuItem>
                   <MenuItem :href="links['create-hologram-learn-hub']">Hologram Learn Hub</MenuItem>
                 </Menu>
                 <Menu label="Share" class="global-header-link">
